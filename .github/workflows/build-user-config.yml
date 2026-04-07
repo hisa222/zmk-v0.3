@@ -101,7 +101,7 @@ jobs:
             ${{ env.base_dir }}/tools/
             ${{ env.base_dir }}/zephyr/
             ${{ env.base_dir }}/bootloader/
-            ${{ env.base_dir }}/zmk-v0.3/
+            ${{ env.base_dir }}/zmk/
           key: ${{ runner.os }}-build-${{ env.cache_name }}-${{ hashFiles('**/west.yml', '**/build.yaml') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache_name }}-
