@@ -120,6 +120,13 @@ jobs:
         working-directory: ${{ env.base_dir }}
         run: west zephyr-export
 
+      - name: Debug directory structure
+        run: |
+          echo "=== base_dir contents ==="
+          ls "${{ env.base_dir }}"
+          echo "=== workspace contents ==="
+          ls /__w/zmk-config-ErgoSloth/zmk-config-ErgoSloth/
+
       - name: West Build (${{ env.display_name }})
         working-directory: ${{ env.base_dir }}
         shell: sh -x {0}
